@@ -5,4 +5,5 @@
     <string name="skribble3">Fold clothes</string>
     <string name="skribble4">Throw clothes in trash!</string>
     <string name="skribble5">Refer to task 1</string>
+    <string name="savetask">saveTask</string>
 </resources>

@@ -15,7 +15,7 @@ class ItemAdapter(private val context: Context, private val dataset: List<Skribb
     RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
     class ItemViewHolder(private val view: View) : RecyclerView.ViewHolder(view){
         //find text view created in list_item
-        val textView: TextView =  view.findViewById(R.id.item_title)
+        val textView: TextView =  view.findViewById(R.id.task_text)
     }
     //abstract methods that need to be implemented from [RecyclerView] superclass
 

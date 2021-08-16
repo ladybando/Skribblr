@@ -5,6 +5,7 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import androidx.room.Entity;
 import android.provider.BaseColumns
 import android.provider.BaseColumns._ID
 import com.example.android.skribblr.model.Skribble
@@ -20,6 +21,7 @@ import com.example.android.skribblr.util.DBHandler.FeedReaderContract.FeedEntry.
 import com.example.android.skribblr.util.DBHandler.FeedReaderContract.FeedEntry.USERS_COLUMN_ID
 
 //connects to SQLite Database
+@Entity
 class DBHandler(
     context: Context?,
     table_name: String?,

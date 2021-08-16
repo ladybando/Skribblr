@@ -2,6 +2,7 @@ package com.example.android.skribblr
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.skribblr.adapter.ItemAdapter
 import com.example.android.skribblr.data.Datasource
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
         recyclerView.adapter = ItemAdapter(this, myDataset)
-
+        recyclerView.layoutManager = LinearLayoutManager(this)
         // Use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
         recyclerView.setHasFixedSize(true)
