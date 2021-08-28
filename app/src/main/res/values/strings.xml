@@ -6,10 +6,11 @@
     <string name="skribbl4">Throw clothes in trash!</string>
     <string name="skribbl5">Refer to task 1</string>
     <string name="todo">ToDo :)</string>
-    <string name="tasks">Tasks</string>
+    <string name="tasks">Skribbls</string>
     <string name="save">Save</string>
-    <string name="skribbl_example">skribble example</string>
-    <string name="submit_task">submit_task</string>
-    <string name="new_note">Write new note here</string>
-    <string name="save_new_task">Save a new task</string>
+    <string name="skribbl_example">skribbl example</string>
+    <string name="submit_task">Submit Skribbl</string>
+    <string name="new_note">Add new Skribble </string>
+    <string name="save_new_task">Save Skribbl</string>
+    <string name="float_button">Float Action Button</string>
 </resources>
