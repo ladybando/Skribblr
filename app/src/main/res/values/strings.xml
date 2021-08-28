@@ -1,9 +1,15 @@
 <resources>
     <string name="app_name">Skribblr</string>
-    <string name="skribble1">Take out trash</string>
-    <string name="skribble2">Wash clothes</string>
-    <string name="skribble3">Fold clothes</string>
-    <string name="skribble4">Throw clothes in trash!</string>
-    <string name="skribble5">Refer to task 1</string>
-    <string name="savetask">saveTask</string>
+    <string name="skribbl1">Take out trash</string>
+    <string name="skribbl2">Wash clothes</string>
+    <string name="skribbl3">Fold clothes</string>
+    <string name="skribbl4">Throw clothes in trash!</string>
+    <string name="skribbl5">Refer to task 1</string>
+    <string name="todo">ToDo :)</string>
+    <string name="tasks">Tasks</string>
+    <string name="save">Save</string>
+    <string name="skribbl_example">skribble example</string>
+    <string name="submit_task">submit_task</string>
+    <string name="new_note">Write new note here</string>
+    <string name="save_new_task">Save a new task</string>
 </resources>
