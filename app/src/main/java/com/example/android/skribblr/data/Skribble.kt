@@ -1,9 +1,11 @@
-package com.example.android.skribblr.data;
+package com.example.android.skribblr.data
 
 import java.util.Date;
-data class Skribble(
-        val id: Long,
-        val date:Date,
-        val note: String,
-        val urgency: String
+
+data class Skribbl(
+    val id: Long,
+    val title: String,
+    val date:Date,
+    val note: String,
+    val urgency: String
 )
