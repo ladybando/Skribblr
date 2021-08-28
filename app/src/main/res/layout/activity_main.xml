@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 <!--TODO create scrollable grid list
  TODO first row shows snippet of list clicking opens full list and option to create new list
- TODO next list shows editable text field to start a new quick note
- TODO add action button (plus sign) to add a new note or task-->
+ TODO next list shows editable text field to start a new quick note-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@android:color/transparent"
         android:scrollbars="vertical"
-        app:layoutManager="LinearLayoutManager"
-        tools:listitem="@layout/list_item"/>
+        app:layoutManager="LinearLayoutManager" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="20dp"
-        android:src="@drawable/ic_add"/>
-</FrameLayout>
+        android:layout_margin="16dp"
+        android:contentDescription="@string/float_button"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
