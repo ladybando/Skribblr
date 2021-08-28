@@ -4,36 +4,41 @@ import android.content.res.Resources
 import com.example.android.skribblr.R
 import java.util.*
 
-fun skribblesList(resources : Resources):  List<Skribble>{
+fun skribblsList(resources : Resources):  List<Skribbl>{
     return listOf(
-        Skribble(
+        Skribbl(
             id = 1,
+            title="",
             date = Date(8/28/2020),
-            note = resources.getString(R.string.skribble1),
+            note = resources.getString(R.string.skribbl1),
             urgency = "Low"
         ),
-        Skribble(
+        Skribbl(
             id = 2,
+            title="",
             date = Date(8/28/2020),
-            note = resources.getString(R.string.skribble2),
+            note = resources.getString(R.string.skribbl2),
             urgency = "Low"
         ),
-        Skribble(
+        Skribbl(
             id = 3,
+            title="",
             date = Date(8/28/2020),
-            note = resources.getString(R.string.skribble3),
+            note = resources.getString(R.string.skribbl3),
             urgency = "Low"
         ),
-        Skribble(
+        Skribbl(
             id = 4,
+            title="hate laundry",
             date = Date(8/28/2020),
-            note = resources.getString(R.string.skribble4),
+            note = resources.getString(R.string.skribbl4),
             urgency = "Low"
         ),
-        Skribble(
+        Skribbl(
             id = 5,
+            title="",
             date = Date(8/28/2020),
-            note = resources.getString(R.string.skribble5),
+            note = resources.getString(R.string.skribbl5),
             urgency = "Low"
         )
     )
