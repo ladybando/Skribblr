@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="teal_300">#009688</color>
+    <!--Primary-->
+    <color name="teal_300">#4db6ac </color>
     <color name="teal_light">#82e9de</color>
     <color name="teal_dark">#00867d</color>
+    <!--Secondary -->
     <color name="red_a_400">#ff3d00</color>
     <color name="red_light">#ff6434</color>
     <color name="red_dark">#f50057</color>
-    <color name="black">#FF000000</color>
+    <!--Supporting Cast-->
     <color name="brown">#3e2723</color>
+    <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>
