@@ -37,3 +37,12 @@ class SkribblAdapter(private val context: Context, private val dataset: MutableL
         }
 
     }
+    
+    
+    override fun getItemCount()= dataset.size
+
+
+   inner class SkribblViewHolder( view: View) : RecyclerView.ViewHolder(view){
+       val skribblTextView: TextView=view.findViewById(R.id.scrib_text_view)
+   }
+}
