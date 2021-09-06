@@ -1,48 +1,37 @@
 package com.example.android.skribblr.adapter
 
+package com.example.android.skribblr.adapter
+
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.android.stickies.R
-import com.example.android.stickies.data.Skribbl
+import com.example.android.skribblr.R
 
-class SkribblAdapter(private val context: Context, private val dataset: MutableList<Skribbl>) : RecyclerView.Adapter<SkribblAdapter.SkribblViewHolder>() {
+class SkribblrAdapter(context: Context, val dataset:MutableList<String>) : RecyclerView.Adapter<SkribblrAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SkribblViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.activity_list, parent, false)
-        return SkribblViewHolder(view)
+    //two by two grid list?
+    //clickable to edit and/or delete
+    //clicking opens to edit
+    //long click to delete
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.list_item, parent, false)
+        return SkribblrViewHolder(view)
     }
 
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.textView.text=dataset[position]
+    }
 
-    override fun onBindViewHolder(holder: SkribblViewHolder, position: Int) {
-        val skribblItem= dataset[position]
-        holder.skribblTextView.text = skribblItem.note
-        holder.itemView.setOnLongClickListener{
-            when (skribblItem.urgency) {
-                "LOW" -> {
-                    holder.skribblTextView.resources.getDrawable(R.drawable.ic_low_priority)
-                }
-                "MEDIUM" -> {
-                    holder.skribblTextView.resources.getDrawable(R.drawable.ic_medium_priority)
-                }
-                else -> {
-                    holder.skribblTextView.resources.getDrawable(R.drawable.ic_priority_high)
-                }
-            }
-            notifyItemRemoved(position)
-            true
+    override fun getItemCount(): Int=dataset.size
+
+    class SkribblrViewHolder(view: View): RecyclerView.ViewHolder(view) {
+        val textView:TextView
+        init {
+            textView=view.findViewById(R.id.skribbl_text_view)
         }
-
     }
-    
-    
-    override fun getItemCount()= dataset.size
-
-
-   inner class SkribblViewHolder( view: View) : RecyclerView.ViewHolder(view){
-       val skribblTextView: TextView=view.findViewById(R.id.scrib_text_view)
-   }
 }
