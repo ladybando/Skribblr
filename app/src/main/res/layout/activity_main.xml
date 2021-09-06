@@ -6,21 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@android:color/transparent"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/activity_list" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/float_button"
+            android:src="@drawable/ic_add" />
+    </GridLayout>
+
+   <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recycler_view"
-        android:scrollbars="vertical"
-        android:background="@android:color/transparent"
-        tools:listitem="@layout/list_item"/>
+        android:id="@+id/text_in_layout"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="100dp">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:contentDescription="@string/float_button"
-        android:src="@drawable/ic_add"
-        android:layout_gravity="end|bottom"/>
+       <EditText
+           android:id="@+id/editText"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:hint="@string/sample_task"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toStartOf="parent" />
 
+       <ImageButton
+           android:id="@+id/submit_button"
+           android:layout_width="wrap_content"
+           android:layout_height="48dp"
+           android:layout_gravity="end"
+           android:src="@drawable/ic_submit_new"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toEndOf="@+id/editText" />
+   </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
