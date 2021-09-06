@@ -21,8 +21,6 @@ class MainActivity : AppCompatActivity() {
         val adapter=RecyclerViewAdapter(this,list)
         recyclerView.adapter=adapter
 
-        //TODO set floating action button to move to NewSkribblFragment
-        //create onClick method and call in onClickListener lambda
         binding.fab.setOnClickListener {
             setContentView(R.layout.fragment_new_skribbl)
         }
