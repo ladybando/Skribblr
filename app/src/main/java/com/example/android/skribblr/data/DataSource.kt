@@ -1,46 +1,13 @@
 package com.example.android.skribblr.data
 
-import android.content.res.Resources
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+data class DataSource(var notes: String)  {
+//takes in user input as a string
 
-import android.content.res.Resources
-import com.example.android.stickies.R
-import java.util.*
+    //should function also accept a string as an argument? note?
+   fun skribblList(): MutableList<String>{
+        val tempList=mutableListOf("Wash dishes", "Clean clothes", "Wash car", "Finish project")
+       return tempList
+   // return mutableListOf<String>(notes)
+   }
 
-class DataSource{
-    fun skribblsList(resources : Resources):  MutableList<Skribbl> {
-        return mutableListOf(
-            Skribbl(
-                title = "",
-                date = Date(8 / 28 / 2020.toLong()),
-                note = resources.getString(R.string.skribbl1),
-                urgency = "Low"
-            ),
-            Skribbl(
-                title = "",
-                date = Date(8 / 28 / 2020.toLong()),
-                note = resources.getString(R.string.skribbl2),
-                urgency = "Medium"
-            ),
-            Skribbl(
-                title = "",
-                date = Date(8 / 28 / 2020.toLong()),
-                note = resources.getString(R.string.skribbl3),
-                urgency = "Low"
-            ),
-            Skribbl(
-                title = "hate laundry",
-                date = Date(8 / 28 / 2020.toLong()),
-                note = resources.getString(R.string.skribbl4),
-                urgency = "Low"
-            ),
-            Skribbl(
-                title = "",
-                date = Date(8 / 28 / 2020.toLong()),
-                note = resources.getString(R.string.skribbl5),
-                urgency = "Low"
-            )
-        )
-    }
-
+}
