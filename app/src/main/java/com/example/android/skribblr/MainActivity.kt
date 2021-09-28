@@ -1,3 +1,5 @@
+package com.example.android.skribblr
+
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -85,4 +87,3 @@ class MainActivity : AppCompatActivity(), TaskViewAdapter.Listener {
             .show()
     }
 }
-
