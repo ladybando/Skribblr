@@ -7,7 +7,6 @@ import com.example.android.skribblr.databinding.ActivityListOfItemsBinding
 
 class ListOfItemsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityListOfItemsBinding
-    private val TAG :String = "NewItemActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

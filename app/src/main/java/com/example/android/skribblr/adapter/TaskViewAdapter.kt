@@ -12,9 +12,11 @@ import com.example.android.skribblr.model.ViewModel
 
 class TaskViewAdapter(private val listener: Listener,
                       private val context: Context,
-                      private var dataSet: MutableList<String>
+
 ) :
     RecyclerView.Adapter<TaskViewAdapter.ViewHolder>() {
+
+    private var dataSet = mutableListOf<String>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)

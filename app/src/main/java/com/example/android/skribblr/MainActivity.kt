@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity(), TaskViewAdapter.Listener {
         setContentView(binding.root)
 
         recyclerView = binding.recyclerView
-        adapter = TaskViewAdapter(this, this, viewModel.taskList)
+        adapter = TaskViewAdapter(this, this)
         recyclerView.adapter = adapter
         recyclerView.layoutManager =
             StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
